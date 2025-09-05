@@ -3,11 +3,12 @@ use crate::core::writer::write_all_data;
 use std::time::Instant;
 
 mod core;
+mod pixpal;
 
 fn main() {
     let now = Instant::now();
 
-    let terrain = Terrain::new(200).dla(4500).complete_pattern();
+    let terrain = Terrain::new(1).init().upscale_n(5).complete_pattern();
 
     write_all_data(terrain.values_as_tile_vector())
         .expect("Failed to create/replace and fill data file !");
