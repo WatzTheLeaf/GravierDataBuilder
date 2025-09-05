@@ -1,7 +1,7 @@
+use crate::core::tile::Tile;
 use byteorder::{LittleEndian, WriteBytesExt};
 use std::fs::File;
 use std::io::BufWriter;
-use crate::core::tile::Tile;
 
 const PATH: &str = "../Data/tdata.bin";
 

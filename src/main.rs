@@ -1,20 +1,19 @@
-use std::time::Instant;
+use crate::core::terrain::Terrain;
 use crate::core::writer::write_all_data;
-use crate::generation::terrain::Terrain;
+use std::time::Instant;
 
 mod core;
-mod generation;
 
 fn main() {
-
     let now = Instant::now();
 
-    let terrain = Terrain::new(500)
-        .dla(10000)
-        .complete_pattern();
+    let terrain = Terrain::new(200).dla(4500).complete_pattern();
 
     write_all_data(terrain.values_as_tile_vector())
-    .expect("Failed to create/replace and fill data file !");
+        .expect("Failed to create/replace and fill data file !");
 
-    println!("Tile data was generated in {}s", now.elapsed().as_secs());
+    println!(
+        "Tile data was generated in {}s",
+        now.elapsed().as_secs_f32()
+    );
 }
