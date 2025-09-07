@@ -4,5 +4,6 @@ pub struct UV {
 }
 
 pub const GLOW_YELLOW : UV = UV { u: 0.523438, v: 0.367188 };
+pub const GLOW_WHITE : UV = UV { u: 0.773438, v: 0.054688 };
 pub const BASE_BLACK : UV = UV { u: 0.367188, v: 0.023438 };
 pub const MIRROR_BLACK : UV = UV { u: 0.804688, v: 0.734375 };

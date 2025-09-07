@@ -105,7 +105,6 @@ impl Link {
             } else {
                 (self.p2.y, self.p1.y)
             };
-
             for y in y1..=y2 {
                 points.push(Point::new(self.p1.x, y, 2.0));
             }
